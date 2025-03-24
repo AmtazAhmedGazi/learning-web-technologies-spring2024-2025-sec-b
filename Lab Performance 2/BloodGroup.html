@@ -4,8 +4,8 @@
 <title>Blood Group</title>
 </head>
 <body>
-<form action="#" method="post" enctype="" onsubmit="return validate()">
-<table>
+    <form action="#" method="post" enctype="" onsubmit="return validate()">
+        <table>
             <tr>
                 <td>
                     <strong><label>Blood Group</label></strong>
@@ -20,12 +20,14 @@
                     </select>
                 </td>
             </tr>
-</table>
-<hr/>
+        </table>
+        
+        <hr/>
+
     <input type="Submit" value="Submit" />
 
-</form>
-<script>
+    </form>
+    <script>
     function validate() {
       let group = document.getElementById("bloodGroup");
       if (group.value === "") {
@@ -35,6 +37,6 @@
       alert("Registration Successful");
       return true;
     }
-</script>
+    </script>
 </body>
 </html> 

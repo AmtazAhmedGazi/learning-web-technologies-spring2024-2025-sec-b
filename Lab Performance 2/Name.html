@@ -35,23 +35,21 @@
             return false;
           }
           for (let i = 0; i < name.length; i++) {
-            if (
+          if (
               !(
                 (name.charCodeAt(i) >= 97 && name.charCodeAt(i) <= 122) ||
                 (name.charCodeAt(i) >= 65 && name.charCodeAt(i) <= 90) ||
-                name.charCodeAt(i) == 45 ||
-                name.charCodeAt(i) == 46 ||
-                name.charCodeAt(i) == 32
-              )
+                name.charCodeAt(i) == 45 || name.charCodeAt(i) == 46 || name.charCodeAt(i) == 32
+              ) 
             ) {
-              alert("Name can only contain alphabets and . -");
+              alert("Name can only contain a-z or A-Z or dot(.) or dash(-)");
               return false;
             }
           }
           if (
             !(
-              (charCodeAt(name[0]) >= 97 && charCodeAt(name[0]) <= 122) ||
-              (charCodeAt(name[0]) >= 65 && charCodeAt(name[0]) <= 90)
+              (name.charCodeAt(0) >= 97 && name.charCodeAt(0) <= 122) ||
+              (name.charCodeAt(0) >= 65 && name.charCodeAt(0) <= 90)
             )
           ) {
             alert("Name must start with a letter");
