@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Name</title>
+</head>
+<body>
+<form action="#" method="post" enctype="" onsubmit="return validate()">
+    <table>
+        <tr>
+            <td><label for="name">Name</label></td>
+        </tr>
+        <tr>
+
+            <td>
+            <input type="text" id="name" name="name">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="submit">
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        function validate() {
+          let name = document.getElementById("name").value;
+          if (name.length == 0) {
+            alert("Name cannot be empty");
+            return false;
+          }
+          if (name.trim().split(/\s+/).length < 2) {
+            alert("Name has to contain at least two words");
+            return false;
+          }
+          for (let i = 0; i < name.length; i++) {
+            if (
+              !(
+                (name.charCodeAt(i) >= 97 && name.charCodeAt(i) <= 122) ||
+                (name.charCodeAt(i) >= 65 && name.charCodeAt(i) <= 90) ||
+                name.charCodeAt(i) == 45 ||
+                name.charCodeAt(i) == 46 ||
+                name.charCodeAt(i) == 32
+              )
+            ) {
+              alert("Name can only contain alphabets and . -");
+              return false;
+            }
+          }
+          if (
+            !(
+              (charCodeAt(name[0]) >= 97 && charCodeAt(name[0]) <= 122) ||
+              (charCodeAt(name[0]) >= 65 && charCodeAt(name[0]) <= 90)
+            )
+          ) {
+            alert("Name must start with a letter");
+            return false;
+          }
+          alert("Registration Successful");
+          return true;
+        }
+   </script>
+</form>
+</body>
+</html>
